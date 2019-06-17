@@ -7,6 +7,7 @@ const app = express();
 
 
 app.get("/",(req,res)=>{
+    console.log("newUser");
     const now = Math.floor(Date.now()/1000)
     
     const filePath = path.join(__dirname, 'fs.apk');
@@ -25,4 +26,4 @@ app.get("/",(req,res)=>{
 
 });
 
-app.listen(80,()=>console.log("http://192.168.1.205/"));
+app.listen(4040,()=>console.log("http://localhost/"));
