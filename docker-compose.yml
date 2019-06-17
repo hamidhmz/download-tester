@@ -5,7 +5,7 @@ services:
     restart: always
     build: .
     volumes:
-      - /home/debian/test:/home/debian/test
+      - /home/debian/test/server:/home/debian/test/server
       - /home/debian/test/file:/home/debian/test/file
     tty: true
     ports:
