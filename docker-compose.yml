@@ -6,7 +6,7 @@ services:
     build: .
     volumes:
       - /home/debian/test:/home/debian/test
-      - /src/appRelated:/home/debian/test/file
+      - /file:/home/debian/test/file
     tty: true
     ports:
       - '4040:4040'
