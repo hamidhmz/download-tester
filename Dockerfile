@@ -1,5 +1,3 @@
 FROM node
-COPY . /src
-WORKDIR /src
-EXPOSE 4040
-CMD node index.js
+WORKDIR /home/banico/test
+CMD ["sh","-c"," npm install thread-sleep  && npm install  && node index"]

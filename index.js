@@ -1,6 +1,4 @@
 const express = require("express");
-const fs = require('fs');
-const ThrottledReader = require('throttled-reader');
 const path = require("path");
 const streamDownloader = require("./lib/streamDownloadLimiter");
 const app = express();

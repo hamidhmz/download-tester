@@ -5,7 +5,8 @@ services:
     restart: always
     build: .
     volumes:
-      - /home/debian/test:/src
+      - ./:/home/debian/test
+      - /src/:/home/debian/test
     tty: true
     ports:
       - '4040:4040'
