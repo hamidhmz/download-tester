@@ -10,7 +10,7 @@ app.get("/",(req,res)=>{
     console.log("newUser");
     const now = Math.floor(Date.now()/1000)
     
-    const filePath = path.join(__dirname, '/file/2.apk');
+    const filePath = path.join(__dirname, '/file/fs.apk');
 
     // streamDownloader.stream(filePath,res,now,500);
     streamDownloader.streamSleep(filePath,res,now,2);
