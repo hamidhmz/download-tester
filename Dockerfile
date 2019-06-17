@@ -1,3 +1,3 @@
 FROM node
-WORKDIR /home/debian/test
+WORKDIR /src/test
 CMD ["sh","-c"," npm install thread-sleep  && npm install  && node index"]
