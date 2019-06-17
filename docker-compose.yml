@@ -5,7 +5,7 @@ services:
     restart: always
     build: .
     volumes:
-      - ./:/home/banico/test
+      - /home/debian/test:/src
     tty: true
     ports:
-      - '4000:80'
+      - '4040:4040'

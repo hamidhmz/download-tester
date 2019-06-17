@@ -11,7 +11,7 @@ const app = express();
 app.get("/",(req,res)=>{
     const now = Math.floor(Date.now()/1000)
     
-    const filePath = path.join(__dirname, '1.zip');
+    const filePath = path.join(__dirname, 'fs.apk');
 
     // streamDownloader.stream(filePath,res,now,500);
     streamDownloader.streamSleep(filePath,res,now,2);
@@ -23,6 +23,7 @@ app.get("/",(req,res)=>{
     //     }
     //     console.log(Math.floor(Date.now()/1000) - now);
     // });
+    
 
 });
 
