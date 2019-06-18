@@ -1,7 +1,6 @@
 {
     "name": "download-test",
     "script": "index.js",
-    "instances": "2",
     "env": {
         "NODE_ENV": "development"
     },
