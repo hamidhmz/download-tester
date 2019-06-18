@@ -5,7 +5,7 @@ const app = express();
 
 
 
-app.get("/:fileName/:function", (req, res) => {
+app.get("/dl/:fileName/:function", (req, res) => {
     console.log(req.params.fileName);
     const filePath = '/home/debian/test/file/' + req.params.fileName;
 
