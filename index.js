@@ -11,11 +11,11 @@ app.get("/:fileName/:function", (req, res) => {
 
     switch (req.params.function) {
         case "1":
-            streamDownloader.stream(filePath, res, now,1024);//time In bytes per second in kb
+            streamDownloader.stream(filePath, res,1024);//time In bytes per second in kb
             break;
 
         case "2":
-            streamDownloader.streamSleep(filePath, res, now, 500);//time to milliseconds is sleep time
+            streamDownloader.streamSleep(filePath, res, 500);//time to milliseconds is sleep time
             break;
         case "3":
             res.download(filePath); 
