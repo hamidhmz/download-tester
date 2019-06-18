@@ -1,0 +1,19 @@
+{
+  "name": "download",
+  "version": "1.0.0",
+  "description": "this is just for test download streaming",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hamidreza nasrollahy",
+  "license": "ISC",
+  "dependencies": {
+    "@sitespeed.io/throttle": "^0.5.1",
+    "express": "^4.17.1",
+    "express-throttle-bandwidth": "^1.0.1",
+    "mime-types": "^2.1.24",
+    "thread-sleep": "^2.2.0",
+    "throttled-reader": "^1.0.1"
+  }
+}
