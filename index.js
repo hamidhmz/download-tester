@@ -19,6 +19,8 @@ app.get("/:fileName/:function", (req, res) => {
             break;
         case "3":
             res.download(filePath); 
+        default:
+            return 0;
     }
 });
 
