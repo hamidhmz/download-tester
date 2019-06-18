@@ -1,35 +1,24 @@
 const express = require("express");
-const path = require("path");
 const streamDownloader = require("./lib/streamDownloadLimiter");
 const app = express();
 
 
 
 
-app.get("/:fileName/:time/:function",(req,res)=>{
-    console.log("newUser");
-    const now = Math.floor(Date.now()/1000);
+app.get("/:fileName/:function", (req, res) => {
     console.log(req.params.fileName);
-    const filePath =  '/home/debian/test/file/'+ req.params.fileName;
+    const filePath = '/home/debian/test/file/' + req.params.fileName;
 
-    switch(req.params.function)
-    {
-        case "stream":
-            streamDownloader.stream(filePath,res,now,req.params.time);//time In bytes per second
+    switch (req.params.function) {
+        case "1":
+            streamDownloader.stream(filePath, res, now,1024);//time In bytes per second in kb
             break;
-    
-        case "streamSleep":
-            streamDownloader.streamSleep(filePath,res,now,req.params.time);//time is sleep time
+
+        case "2":
+            streamDownloader.streamSleep(filePath, res, now, 500);//time to milliseconds is sleep time
             break;
-    
-        default:
-            res.download(filePath, (err) => {
-                if (err) {
-                    console.log(err);
-                    return
-                }
-                console.log(Math.floor(Date.now()/1000) - now);
-            });
+        case "3":
+            res.download(filePath); 
     }
 });
 
